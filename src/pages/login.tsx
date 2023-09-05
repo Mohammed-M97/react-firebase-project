@@ -10,11 +10,15 @@ export const Login = () => {
         navigate("/");
     }
     return (
-    <div>
-        <p>
-            Sign In With Google To Continue
-        </p>
-        <button onClick={signInWithGoogle}>Sign In With Google</button>
-    </div>
+        <div className='pagewrap'>
+            <div className='form'>
+                <p>
+                    Sign In With Google To Continue
+                </p>
+                <button className='btn-login' onClick={signInWithGoogle}>
+                    Sign In
+                </button>
+            </div>
+        </div>
     );
 }

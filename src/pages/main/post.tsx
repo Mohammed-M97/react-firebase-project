@@ -78,19 +78,14 @@ function Post(props: props) {
         getLikes();
     }, []);
     return (
-    <div>
-      <div className='title'>
-        <h1>{post.title}</h1>
-      </div>
-      <div className='body'>
-        <p>{post.description}</p>
-      </div>
-      <div className='footer'>
-        <p>@{post.username}</p>
-        <button onClick={hasUserLikes ? removeLike : addLike}> 
-        {hasUserLikes ? <>&#128078;</> : <>&#128077;</>} </button>
+    <div className="box">
+      <h2>{post.title}</h2>
+      <p>{post.description}</p>
+      <p>{post.username}</p>
+      <a href="#" className="btn" onClick={hasUserLikes ? removeLike : addLike}>
+        {hasUserLikes ? <>&#128078;</> : <>&#128077;</>}
+      </a>
         {likes && <p>Likes: {likes?.length}</p>}
-      </div>
     </div>
   )
 }

@@ -37,13 +37,18 @@ function CreateForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onCreatePost)}>
-      <input placeholder='Title...' {...register("title")} />
-      <p style={{color: "red"}}>{errors.title?.message}</p>
-      <textarea placeholder='Description...' {...register("description")} />
-      <p style={{color: "red"}}>{errors.description?.message}</p>
-      <input type="submit" className='submit-btn' />
-    </form>
+    <div className='pagewrap'>
+      <form className='form' onSubmit={handleSubmit(onCreatePost)}>
+        <p>
+            Create A Post
+        </p>
+        <input placeholder='Title...' {...register("title")} />
+        <p style={{color: "red"}}>{errors.title?.message}</p>
+        <textarea placeholder='Description...' {...register("description")} />
+        <p style={{color: "red"}}>{errors.description?.message}</p>
+        <input type="submit"/>
+      </form>
+    </div>
   )
 }
 

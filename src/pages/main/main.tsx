@@ -25,12 +25,16 @@ export const Main = () => {
   useEffect(() => {
     getPosts();
   }, []);
-
+  
   return (
-    <div>
-      {postsList?.map((post) => (
-        <Post post={post} />
-      ))}
+    <div className="containers">
+
+        <div className="box-container">
+            {postsList?.map((post) => (
+              <Post post={post} />
+            ))}
+        </div>
+
     </div>
   );
 };
